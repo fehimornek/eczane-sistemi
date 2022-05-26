@@ -1,0 +1,34 @@
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 3fr 3fr 3fr;
+    background-color: #2196F3;
+    text-align: center;
+    align-items: center;
+    border: 20px solid rgb(205, 62, 62);
+}
+
+.log {
+    grid-column: 4 / 5;
+}
+
+.atama_tek{
+    grid-column: 1 / 5;
+}
+
+.atama_toplu {
+    grid-column: 1 / 5;
+    
+}
+
+.atama_otomatik {
+    grid-column: 1 / 5;
+}
+
+.input_text {
+    width: 100px;
+}
+
+.table_admin {
+    
+}
