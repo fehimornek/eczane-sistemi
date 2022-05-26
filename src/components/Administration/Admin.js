@@ -18,7 +18,6 @@ const Admin = () => {
         let maxDate = lengthOfMonth
         let maxYear = year
         let maxMonth = month
-        console.log(nextMonthPickableDays)
         // if it's not the beginning of the month (which is very unlikely)
         if (nextMonthPickableDays > 0) {
             maxDate = nextMonthPickableDays
@@ -29,7 +28,7 @@ const Admin = () => {
             }
         }
         if (date < 10) date = "0" + date
-
+ 
         if (month < 10) month = "0" + month
 
         if (maxMonth < 10) maxMonth = "0" + maxMonth 
@@ -41,14 +40,20 @@ const Admin = () => {
         return [minimumDate, maximumDate, lengthOfMonth]
     }
 
+    let eczaneList = []
+    for (let i = 0; i < 30; i++) eczaneList.push({i:""})
+
+    const [eczaneler, setEczaneler] = useState(eczaneList)
+    console.log(eczaneler)
+
     let dates = minMaxDate()
 
     return (
         <div className='grid_container'>
             <Login></Login>
-            <TekTek dates={dates}></TekTek>
-            <Toplu dates={dates}></Toplu>
-            <Otomatik dates={dates}></Otomatik>
+            <TekTek eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></TekTek>
+            <Toplu eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Toplu>
+            <Otomatik eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Otomatik>
         </div>
     )
 }
