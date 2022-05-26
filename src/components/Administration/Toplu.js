@@ -1,11 +1,13 @@
 import React from "react";
 
-const Toplu = ({setEczaneler, monthInfoArray}) => {
+const Toplu = ({dates}) => {
+    const minDate = dates[0]
+    const maxDate = dates[1]
     return(
         <div className='atama_toplu'>
           <h2>Toplu Ata</h2>
           <form>
-            <input type="date"></input>
+            <input type="date" min={minDate} max={maxDate}></input>
             <table className="table_admin" align="center">
               <tr>
                 <th>Merkez</th>

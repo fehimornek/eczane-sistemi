@@ -1,10 +1,11 @@
 import React from "react";
 
-const TekTek = ({setEczaneler}) => {
+const TekTek = ({dates}) => {
     const eczaneAtama = () =>{
 
     }
-
+    const minDate = dates[0]
+    const maxDate = dates[1]
     return(
         <div className='atama_tek'>
           <h2>Tek Tek Ata</h2>
@@ -22,7 +23,7 @@ const TekTek = ({setEczaneler}) => {
               </select>
             </div>
             <div className='tarih'>
-              <input type="date" min="2022-05-20" max="2023-05-20"></input>
+              <input type="date" min={minDate} max={maxDate}></input>
             </div>
             <div className='eczane'>
               <select id="eczane_sec">
