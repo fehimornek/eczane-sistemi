@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Otomatik from "./Otomatik"
 import TekTek from "./TekTek"
 import Toplu from "./Toplu"
@@ -18,7 +18,7 @@ const Admin = () => {
         let maxDate = lengthOfMonth
         let maxYear = year
         let maxMonth = month
-
+        console.log(nextMonthPickableDays)
         // if it's not the beginning of the month (which is very unlikely)
         if (nextMonthPickableDays > 0) {
             maxDate = nextMonthPickableDays
@@ -38,9 +38,11 @@ const Admin = () => {
     
         const minimumDate = year + "-" + month + "-" + date
         const maximumDate = maxYear + "-" + maxMonth + "-" + maxDate
-        return [minimumDate, maximumDate]
+        return [minimumDate, maximumDate, lengthOfMonth]
     }
+
     let dates = minMaxDate()
+
     return (
         <div className='grid_container'>
             <Login></Login>
