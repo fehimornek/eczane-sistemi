@@ -47,16 +47,7 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
               <input id="tarih_sec_tek" type="date" min={minDate} max={maxDate}></input>
             </div>
             <div className='eczane'>
-              <select id="eczane_sec_tek">
-                <option>Faruk</option>
-                <option>Cemal</option>
-                <option>Kumpir</option>
-                <option>Zaa</option>
-                <option>Hebele</option>
-                <option>Hübele</option>
-                <option>Lala</option>
-                <option>Lolo</option>
-              </select>
+              <input type="text" id="eczane_sec_tek"/>
             </div>
             <input onClick={eczaneAtaTek} type="submit"></input>
           </form>
