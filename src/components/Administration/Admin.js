@@ -41,10 +41,9 @@ const Admin = () => {
     }
 
     let eczaneList = []
-    for (let i = 0; i < 30; i++) eczaneList.push({i:""})
+    for (let i = 0; i < 30; i++) eczaneList.push("-")
 
     const [eczaneler, setEczaneler] = useState(eczaneList)
-    console.log(eczaneler)
 
     let dates = minMaxDate()
 
@@ -53,7 +52,8 @@ const Admin = () => {
             <Login></Login>
             <TekTek eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></TekTek>
             <Toplu eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Toplu>
-            <Otomatik eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Otomatik>
+            <Otomatik eczaneler={eczaneler} 
+            setEczaneler={setEczaneler} dates={dates}></Otomatik>
         </div>
     )
 }

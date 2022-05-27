@@ -23,8 +23,12 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
         let seciliSehir = document.getElementById("sehir_sec").value;
         let seciliEczane = document.getElementById("eczane_sec").value;
         let index = indexCalculator()
-        setEczaneler()
+        const updatedEczane = eczaneler
+        updatedEczane[index] = [seciliSehir, seciliEczane]
+        setEczaneler(updatedEczane)
+        console.log(eczaneler)
     }
+
     const minDate = dates[0]
     const maxDate = dates[1]
     const lenMonth = dates[2]
