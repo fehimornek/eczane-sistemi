@@ -3,7 +3,7 @@ import React from "react";
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
 
     const indexCalculator = () =>{
-      let seciliTarih = new Date(document.getElementById("tarih_sec").value)
+      let seciliTarih = new Date(document.getElementById("tarih_sec_tek").value)
       let seciliAy = seciliTarih.getMonth() + 1
       let seciliGun = seciliTarih.getDate()
       let minMonth = Number(minDate.split("-")[1])
@@ -18,14 +18,24 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
       return index
     }
 
-    const eczaneAtama = (e) =>{
+    const eczaneAtaTek = (e) =>{
         e.preventDefault()
-        let seciliSehir = document.getElementById("sehir_sec").value;
-        let seciliEczane = document.getElementById("eczane_sec").value;
+        let seciliSehir = document.getElementById("sehir_sec_tek").value;
+        let seciliEczane = document.getElementById("eczane_sec_tek").value;
         let index = indexCalculator()
-        const updatedEczane = eczaneler
-        updatedEczane[index] = [seciliSehir, seciliEczane]
-        setEczaneler(updatedEczane)
+
+        if (!Number.isNaN(index)){
+          const updatedEczane = eczaneler
+          updatedEczane[index][seciliSehir] = seciliEczane
+          setEczaneler(updatedEczane)
+          document.getElementById("mesaj_basari_hata").innerHTML="Degisiklikler kaydedildi!";
+        }
+        else{
+          document.getElementById("mesaj_basari_hata").innerHTML="Tarih secin!";
+        }
+        setTimeout(function(){
+          document.getElementById("mesaj_basari_hata").innerHTML="";
+          },1000);
         console.log(eczaneler)
     }
 
@@ -38,9 +48,11 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
           <form>
             <div className='sehir'>
               <select id="sehir_sec">
-                <option>Merkez</option>
+                <option>Merkez1</option>
+                <option>Merkez2</option>
                 <option>Süloğlu</option>
                 <option>Keşan</option>
+                <option>Hav</option>
                 <option>İpsala</option>
                 <option>Enez</option>
                 <option>Meriç</option>
@@ -49,10 +61,10 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
               </select>
             </div>
             <div className='tarih'>
-              <input id="tarih_sec" type="date" min={minDate} max={maxDate}></input>
+              <input id="tarih_sec_tek" type="date" min={minDate} max={maxDate}></input>
             </div>
             <div className='eczane'>
-              <select id="eczane_sec">
+              <select id="eczane_sec_tek">
                 <option>Faruk</option>
                 <option>Cemal</option>
                 <option>Kumpir</option>
@@ -63,8 +75,10 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
                 <option>Lolo</option>
               </select>
             </div>
-            <input onClick={eczaneAtama} type="submit"></input>
+            <input onClick={eczaneAtaTek} type="submit"></input>
           </form>
+          <h4 id="mesaj_basari_hata"></h4>
+
         </div>
     )
 }

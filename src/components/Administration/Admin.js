@@ -41,7 +41,8 @@ const Admin = () => {
     }
 
     let eczaneList = []
-    for (let i = 0; i < 30; i++) eczaneList.push("-")
+    for (let i = 0; i < 30; i++) eczaneList.push({"Merkez1":"-", "Merkez2":"-", "Meriç":"-", "Havsa":"-", "Enez":"-",
+                                                 "Keşan":"-", "Lalapaşa":"-", "Süloğlu":"-", "İpsala":"-", "Uzunköprü":"-"})
 
     const [eczaneler, setEczaneler] = useState(eczaneList)
 
