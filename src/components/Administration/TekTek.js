@@ -1,5 +1,5 @@
 import React from "react";
-import indexCalculator from "./IndexCalculator";
+import indexCalculator from "../misc/indexCalculator";
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
     const eczaneAtaTek = (e) =>{
         e.preventDefault()

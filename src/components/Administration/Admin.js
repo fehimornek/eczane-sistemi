@@ -4,57 +4,16 @@ import TekTek from "./TekTek"
 import Toplu from "./Toplu"
 import Login from "./Login"
 import "./Admin.css"
+import minMaxDate from '../misc/minMaxDate'
 
-const Admin = () => {
-    const minMaxDate = () => {
-        const fullDate = new Date()
-        let day = fullDate.getDay() 
-        let month = fullDate.getMonth() + 1
-        let year = fullDate.getFullYear()
-        let date = fullDate.getDate()
-        var lengthOfMonth= new Date(year, month+1, 0).getDate();
-         
-        let nextMonthPickableDays = 30 - (lengthOfMonth - date + 1)
-        let maxDate = lengthOfMonth
-        let maxYear = year
-        let maxMonth = month
-        // if it's not the beginning of the month (which is very unlikely)
-        if (nextMonthPickableDays > 0) {
-            maxDate = nextMonthPickableDays
-            maxMonth = month + 1
-            if (maxMonth === 13){
-                maxMonth = 1
-                maxYear = year + 1
-            }
-        }
-        if (date < 10) date = "0" + date
- 
-        if (month < 10) month = "0" + month
-
-        if (maxMonth < 10) maxMonth = "0" + maxMonth 
-        
-        if (maxDate < 10) maxDate = "0" + maxDate
-    
-        const minimumDate = year + "-" + month + "-" + date
-        const maximumDate = maxYear + "-" + maxMonth + "-" + maxDate
-        return [minimumDate, maximumDate, lengthOfMonth]
-    }
-
-    let eczaneList = []
-    for (let i = 0; i < 30; i++) eczaneList.push({"Merkez1":"-", "Merkez2":"-", "Meriç":"-", "Havsa":"-", "Enez":"-",
-                                                 "Keşan":"-", "Lalapaşa":"-", "Süloğlu":"-", "İpsala":"-", "Uzunköprü":"-"})
-
-    const [eczaneler, setEczaneler] = useState(eczaneList)
-
+const Admin = ({eczaneler, setEczaneler}) => {
     let dates = minMaxDate()
-    console.log(eczaneler)
     return (
-        <div className='grid_container'>
+        <div className='grid_container_admin'>
             <Login></Login>
             <TekTek eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></TekTek>
             <Toplu eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Toplu>
-            <Otomatik eczaneler={eczaneler} 
-            setEczaneler={setEczaneler} dates={dates}></Otomatik>
+            <Otomatik eczaneler={eczaneler} setEczaneler={setEczaneler} dates={dates}></Otomatik>
         </div>
     )
 }
