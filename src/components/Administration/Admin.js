@@ -47,7 +47,7 @@ const Admin = () => {
     const [eczaneler, setEczaneler] = useState(eczaneList)
 
     let dates = minMaxDate()
-
+    console.log(eczaneler)
     return (
         <div className='grid_container'>
             <Login></Login>
