@@ -1,28 +1,11 @@
 import React from "react";
-
+import indexCalculator from "./IndexCalculator";
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
-
-    const indexCalculator = () =>{
-      let seciliTarih = new Date(document.getElementById("tarih_sec_tek").value)
-      let seciliAy = seciliTarih.getMonth() + 1
-      let seciliGun = seciliTarih.getDate()
-      let minMonth = Number(minDate.split("-")[1])
-      let minDay = Number(minDate.split("-")[2])
-      let index = 0;
-      if (minMonth === seciliAy){
-          index= seciliGun - minDay
-      }
-      else if (minMonth !== seciliAy){
-          index = seciliGun + lenMonth - minDay
-      }
-      return index
-    }
-
     const eczaneAtaTek = (e) =>{
         e.preventDefault()
         let seciliSehir = document.getElementById("sehir_sec_tek").value;
         let seciliEczane = document.getElementById("eczane_sec_tek").value;
-        let index = indexCalculator()
+        let index = indexCalculator("tarih_sec_tek", minDate, lenMonth)
 
         if (!Number.isNaN(index)){
           const updatedEczane = eczaneler
@@ -47,7 +30,7 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
           <h2>Tek Tek Ata</h2>
           <form>
             <div className='sehir'>
-              <select id="sehir_sec">
+              <select id="sehir_sec_tek">
                 <option>Merkez1</option>
                 <option>Merkez2</option>
                 <option>Süloğlu</option>

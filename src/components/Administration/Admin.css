@@ -6,6 +6,7 @@
     text-align: center;
     align-items: center;
     border: 20px solid rgb(205, 62, 62);
+
 }
 
 .log {
@@ -14,11 +15,11 @@
 
 .atama_tek{
     grid-column: 1 / 5;
+
 }
 
 .atama_toplu {
     grid-column: 1 / 5;
-    
 }
 
 .atama_otomatik {
@@ -29,6 +30,6 @@
     width: 100px;
 }
 
-.table_admin {
-    
+.mesaj_basari_hata{
+    text-align: right;
 }
