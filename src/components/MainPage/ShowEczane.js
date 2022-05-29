@@ -11,6 +11,7 @@ const ShowEczane = ({newEczane, setNewEczane, eczaneler, showDate}) => {
         document.getElementById("kesan_main").innerHTML = eczaneler[showDate].Keşan
         document.getElementById("lalapasa_main").innerHTML =  eczaneler[showDate].Lalapaşa
         document.getElementById("suloglu_main").innerHTML =  eczaneler[showDate].Süloğlu
+        document.getElementById("ipsala_main").innerHTML =  eczaneler[showDate].İpsala
         document.getElementById("uzunkopru_main").innerHTML =  eczaneler[showDate].Uzunköprü
 
     }
@@ -59,7 +60,7 @@ const ShowEczane = ({newEczane, setNewEczane, eczaneler, showDate}) => {
                     <td id="suloglu_main"></td>
                 </tr>
                 <tr>
-                    <td>Merkez</td>
+                    <td>İpsala</td>
                     <td id="ipsala_main"></td>
                 </tr>
                 <tr>
