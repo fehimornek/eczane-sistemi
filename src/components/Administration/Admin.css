@@ -1,12 +1,11 @@
-.grid_container {
+.grid_container_admin {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 3fr 3fr 3fr;
     background-color: #2196F3;
     text-align: center;
     align-items: center;
-    border: 20px solid rgb(205, 62, 62);
-
+    height: 100vh;
 }
 
 .log {

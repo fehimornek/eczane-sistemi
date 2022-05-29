@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 const Otomatik = ({eczaneler, setEczaneler, dates}) => {
+
     let secilebilirEczaneler = {merkez:["Akın","Altıerler","Aytaç","Baca","Baraj","Begüm","Berkay","Çakbil","Can","Çebe","Cent","Çiftçi","Deniz","Denizim","Derdiman","Dinçer","Doktoroğlu","Doruk","Edirne Hayat","Eray","Eren Savaşçı","Erkin","Ezgi Engin","Filiz","Fıçıcıoğlu","Giray","Gizem Birkan","Gölet","Gülden","Günaydın","Güneşim","Gürak","Gürkan","Güven","Hatipoğlu","İncinur","Kaya","Kıyık","Koray","Korkut","Kutlutaş","Mehmet Ay","Mercan","Meriç","Murat","Nar","Ömür","Özdemir","Özgür","Pamuk","Pirko","Reyhan","Rukiye Kantar","Sağlam","Sağlık","Şahin","Sancaklı","Selimiye","Seray","Şeren","Serhat","Şifa","Şimşek","Sözer","Süler","Taşkıran","Tekin","Trakya","Tülin","Ülkü","Umut","Uygar","Uzun","Yaşam"],
                                 meric:["Öden","Yeni Meriç"],
                                 havsa:["Derman","Edirne","Gün","Havsa","Yavuz"],
@@ -49,7 +50,6 @@ const Otomatik = ({eczaneler, setEczaneler, dates}) => {
       }
       setEczaneler(updated_eczaneler)
     }
-
 
     return(
         <div className='atama_otomatik'>
