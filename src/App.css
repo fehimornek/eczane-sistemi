@@ -1,0 +1,32 @@
+.pick_button{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 0.1rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.5rem 7rem;
+    border: 2px solid #008CBA;
+}
+
+
+.pick_button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+
+
+.calendar_main{
+    grid-row: 4 / 5;
+    transition-duration: 0.4s;
+    font-size: 1.5rem;
+    margin: 1.5rem 7rem;
+    padding: 0.5rem 0rem;
+    border: 2px solid #008CBA;
+}
+
+.calendar_main:hover{
+    background-color: #008CBA;
+    color: white;
+}

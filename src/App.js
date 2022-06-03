@@ -2,7 +2,9 @@ import './App.css';
 import Admin from './components/Administration/Admin';
 import Main from './components/MainPage/Main';
 import LoginAccount from './components/LoginPage/LoginAccount';
+import ErrorPage from './components/misc/ErrorPage';
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   let eczaneList = []
@@ -11,11 +13,16 @@ function App() {
 
   const [eczaneler, setEczaneler] = useState(eczaneList)
   return (
-    <div className="App">
-        <Main eczaneler={eczaneler}></Main>
-        <Admin eczaneler={eczaneler} setEczaneler={setEczaneler}></Admin>
-        <LoginAccount></LoginAccount>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Main eczaneler={eczaneler}/>}/>
+          <Route path="/admin" element={<Admin eczaneler={eczaneler} setEczaneler={setEczaneler}/>}/>
+          <Route path="/login" element={<LoginAccount/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

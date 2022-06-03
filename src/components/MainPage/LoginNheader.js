@@ -1,11 +1,12 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const LoginNheader = () => {
 
     return (
         <div className="login">
-            <h2>Seri Eczane Bul</h2>
-            <h2>Login</h2>
+            <h1 className="loginTitle">Seri Eczane Bul</h1>
+            <Link to="/login" className="pick_button link">login</Link>
         </div>
     )
 }
