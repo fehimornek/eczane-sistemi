@@ -1,6 +1,7 @@
 import './App.css';
 import Admin from './components/Administration/Admin';
 import Main from './components/MainPage/Main';
+import LoginAccount from './components/LoginPage/LoginAccount';
 import React, {useState} from 'react';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
         <Main eczaneler={eczaneler}></Main>
         <Admin eczaneler={eczaneler} setEczaneler={setEczaneler}></Admin>
+        <LoginAccount></LoginAccount>
     </div>
   );
 }
