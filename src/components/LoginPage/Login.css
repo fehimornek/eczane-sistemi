@@ -1,0 +1,27 @@
+.main_div {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr 1fr 0.3fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 0.1fr;
+    background-color: beige;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.giris_yap {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.kayit_ol {
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+.kayit_btn {
+ 
+}
+
+.giris_btn{
+    
+}
