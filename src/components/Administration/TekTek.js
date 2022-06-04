@@ -19,7 +19,6 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
         setTimeout(function(){
           document.getElementById("mesaj_basari_hata").innerHTML="";
           },1000);
-        console.log(eczaneler)
     }
 
     const minDate = dates[0]

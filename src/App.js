@@ -12,13 +12,15 @@ function App() {
                                                "Keşan":"-", "Lalapaşa":"-", "Süloğlu":"-", "İpsala":"-", "Uzunköprü":"-"})
 
   const [eczaneler, setEczaneler] = useState(eczaneList)
+  const [users, setUsers] = useState({admin : ["admin", "-", "-"], fehim: ["1234", "05454239292", "fehimornek@gmail.com"]})
+
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<Main eczaneler={eczaneler}/>}/>
           <Route path="/admin" element={<Admin eczaneler={eczaneler} setEczaneler={setEczaneler}/>}/>
-          <Route path="/login" element={<LoginAccount/>}/>
+          <Route path="/login" element={<LoginAccount users={users} setUsers={setUsers}/>}/>
           <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       </div>
