@@ -13,7 +13,7 @@ const SignUp = () => {
             <input type="text"/><br/>
             <label>Password</label><br/>
             <input type="text"/><br/>
-            <button className='Kayit_btn'>kayıt ol</button><br/>
+            <button className='pick_button kayit_btn'>kayıt ol</button><br/>
         </form>
         </div>       
         

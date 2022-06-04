@@ -9,19 +9,21 @@
 }
 
 .giris_yap {
+    padding: 7.8rem 0rem 7.8rem 0rem;
     grid-column: 2 / 3;
     grid-row: 2 / 4;
+    border: solid 2px #008CBA;
+    color: #008CBA;
 }
 
 .kayit_ol {
+    padding: 5rem 0rem 5rem 0rem;
     grid-column: 4 / 5;
     grid-row: 2 / 4;
+    border: solid 2px #008CBA;
+    color: #008CBA;
 }
 
 .kayit_btn {
- 
-}
-
-.giris_btn{
-    
+    padding: 1rem 2rem;
 }
