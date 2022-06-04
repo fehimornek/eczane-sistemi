@@ -15,8 +15,8 @@
     border: solid 2px #008CBA;
     color: #008CBA;
     font-size: 1.5rem;
-    
-    height: 30vh;
+    border-radius: 1rem;    
+    height: 40vh;
 }
 
 .kayit_ol {
@@ -24,9 +24,10 @@
     grid-column: 4 / 5;
     grid-row: 2 / 4;
     border: solid 2px #008CBA;
+    border-radius: 1rem;
     color: #008CBA;
     font-size: 1.5rem;
-    height: 40vh;
+    height: 50vh;
 }
 
 input {

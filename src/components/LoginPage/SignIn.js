@@ -24,11 +24,11 @@ const SignIn = ({users}) => {
     return (
         <div className="giris_yap">
             <form >
-            <label>kullanıcı adı</label><br/>
+            <label>Kullanıcı Adı</label><br/>
             <input type="text" id="username" /><br/>
-            <label>password</label><br/>
+            <label>Şifre</label><br/>
             <input type="password" id="password" /><br/>
-            <button onClick={checkValid} className='pick_button kayit_btn'>giriş yap</button><br/>
+            <button onClick={checkValid} className='pick_button kayit_btn' style={{fontSize: "1.5rem"}}>giriş yap</button><br/>
             <h4 id="mesaj_hata_1"></h4>
 
             </form>

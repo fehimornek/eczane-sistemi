@@ -9,7 +9,7 @@ const LoginAccount = ({users, setUsers}) => {
 
     return (
         <div className="main_div">
-            <Link to="/" className="pick_button link_login">main page</Link>
+            <Link to="/" className="pick_button link_login" style={{fontSize: "1.5rem"}}>main page</Link>
             <SignIn users={users}></SignIn>
             <SignUp users={users} setUsers={setUsers}></SignUp>
         </div>

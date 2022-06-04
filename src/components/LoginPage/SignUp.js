@@ -54,14 +54,14 @@ const SignUp = ({users, setUsers}) => {
         <form >
             <label>Kullanıcı adı</label><br/>
             <input type="text" id="usernameSignup" /> <br/>
-            <label>Password</label><br/>
+            <label>Şifre</label><br/>
             <input type="password" id="passwordSignup"/><br/>
 
             <label>Telefon</label><br/>
             <input type="text" id="telephoneSignup" /><br/>
             <label>Email</label><br/>
             <input type="text" id="emailSignup"/><br/>
-            <button onClick={checkValidation} className='pick_button kayit_btn'>kayıt ol</button><br/>
+            <button onClick={checkValidation} className='pick_button kayit_btn' style={{fontSize: "1.5rem"}}>kayıt ol</button><br/>
             <h4 id="mesaj_hata_2"></h4>
         </form>
         </div>       
