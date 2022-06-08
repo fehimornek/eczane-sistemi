@@ -6,29 +6,74 @@
     text-align: center;
     align-items: center;
     height: 100vh;
+    background-color: beige;
 }
 
 .log {
-    grid-column: 4 / 5;
+    grid-column: 1 / 2;
 }
+
+.splitScreen {
+    display: flex;
+
+}
+
+.splitScreen .left, 
+.splitScreen .right {
+    flex:1;
+    width: 32rem;
+}
+.right{
+    font-size: 2rem;
+}
+
 
 .atama_tek{
     grid-column: 1 / 5;
-
 }
 
 .atama_toplu {
     grid-column: 1 / 5;
+
 }
 
 .atama_otomatik {
     grid-column: 1 / 5;
+
 }
 
 .input_text {
-    width: 100px;
+    width: 8rem;
+    font-size: 1.2rem;
+    padding: 0.30rem 0.5rem;
 }
 
 .mesaj_basari_hata{
     text-align: right;
+}
+
+hr {
+    color: white;
+}
+
+.tarih_admin {
+    width: 10rem;
+    height: 2.1rem;
+    margin-right: 2rem;
+}
+
+.eczaneSecici{
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin: 0.15rem 2rem 0rem 2rem;
+}
+
+.admBtn {
+    height: 2rem;
+}
+
+.tektekBtn {
+    padding: 0.4rem 1.5rem;
+    margin-left: 2rem;
 }

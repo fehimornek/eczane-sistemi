@@ -3,7 +3,7 @@ import Admin from './components/Administration/Admin';
 import Main from './components/MainPage/Main';
 import LoginAccount from './components/LoginPage/LoginAccount';
 import ErrorPage from './components/misc/ErrorPage';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +13,14 @@ function App() {
 
   const [eczaneler, setEczaneler] = useState(eczaneList)
   const [users, setUsers] = useState({admin : ["admin", "-", "-"], fehim: ["1234", "05454239292", "fehimornek@gmail.com"]})
+  
+  useEffect(() => {
+    window.localStorage.setItem("eczeneler", JSON.stringify(eczaneler))
+  }, [eczaneler])
+
+  useEffect(() => {
+    window.localStorage.setItem("users", JSON.stringify(users))
+  }, [users])
 
   return (
     <Router>

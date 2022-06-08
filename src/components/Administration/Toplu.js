@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import indexCalculator from "../misc/indexCalculator";
+
+
 const Toplu = ({eczaneler, setEczaneler, dates}) => {
 
     const eczaneAtaToplu = (e) =>{
@@ -17,8 +19,11 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
       updated_eczaneler[index]["İpsala"] = document.getElementById("Ipsala_inp").value
       updated_eczaneler[index]["Uzunköprü"] = document.getElementById("Uzunkopru_inp").value
       setEczaneler(updated_eczaneler)
-      console.log(eczaneler)
     }
+    useEffect(() => {
+      window.localStorage.setItem("eczeneler", JSON.stringify(eczaneler))
+      console.log(eczaneler)
+    }, [eczaneler])
 
     const minDate = dates[0]
     const maxDate = dates[1]
@@ -28,7 +33,7 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
         <div className='atama_toplu'>
           <h2>Toplu Ata</h2>
           <form>
-            <input id="tarih_sec_toplu" type="date" min={minDate} max={maxDate}></input>
+            <input id="tarih_sec_toplu" type="date" className="tarih_admin" min={minDate} max={maxDate}></input>
             <table className="table_admin" align="center">
               <tr>
                 <th>Merkez1</th>
@@ -53,11 +58,11 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
                 <th><input id="Suloglu_inp" type="text" className="input_text"></input></th>
                 <th><input id="Ipsala_inp" type="text" className="input_text"></input></th>
                 <th><input id="Uzunkopru_inp" type="text" className="input_text"></input></th>
-
               </tr>  
           </table>
-          <input onClick={eczaneAtaToplu} type="submit"></input>
+          <button onClick={eczaneAtaToplu} className="pick_button" style={{padding: "0.4rem 1.5rem"}}>eczane ata</button>
           </form>
+          <hr></hr>
           
         </div>
     )

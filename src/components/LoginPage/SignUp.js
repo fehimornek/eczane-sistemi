@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const SignUp = ({users, setUsers}) => {
 
@@ -39,7 +39,6 @@ const SignUp = ({users, setUsers}) => {
             document.getElementById("passwordSignup").value = ""
             document.getElementById("telephoneSignup").value = ""
             document.getElementById("emailSignup").value = ""
-            console.log(users)
         }
 
 
@@ -48,6 +47,7 @@ const SignUp = ({users, setUsers}) => {
             },1500);
         
     }
+
 
     return (
         <div className="kayit_ol">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import indexCalculator from "../misc/indexCalculator";
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
     const eczaneAtaTek = (e) =>{
@@ -20,16 +20,17 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
           document.getElementById("mesaj_basari_hata").innerHTML="";
           },1000);
     }
+    
 
     const minDate = dates[0]
     const maxDate = dates[1]
     const lenMonth = dates[2]
     return(
         <div className='atama_tek'>
+          <hr></hr>
           <h2>Tek Tek Ata</h2>
           <form>
-            <div className='sehir'>
-              <select id="sehir_sec_tek">
+            <select id="sehir_sec_tek" className="eczaneSecici">
                 <option>Merkez1</option>
                 <option>Merkez2</option>
                 <option>Süloğlu</option>
@@ -40,18 +41,13 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
                 <option>Meriç</option>
                 <option>Lalapaşa</option>
                 <option>Uzunköprü</option>
-              </select>
-            </div>
-            <div className='tarih'>
-              <input id="tarih_sec_tek" type="date" min={minDate} max={maxDate}></input>
-            </div>
-            <div className='eczane'>
-              <input type="text" id="eczane_sec_tek"/>
-            </div>
-            <input onClick={eczaneAtaTek} type="submit"></input>
+            </select>
+            <input id="tarih_sec_tek" type="date" className="tarih_admin" min={minDate} max={maxDate}></input>
+            <input type="text" id="eczane_sec_tek" className="input_text"/>
+            <button onClick={eczaneAtaTek} className="pick_button tektekBtn">atama yap</button>
           </form>
           <h4 id="mesaj_basari_hata"></h4>
-
+          <hr></hr>
         </div>
     )
 }

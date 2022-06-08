@@ -54,9 +54,7 @@ const Otomatik = ({eczaneler, setEczaneler, dates}) => {
     return(
         <div className='atama_otomatik'>
           <h2>Otomatik Ata</h2>
-          <form>
-            <button onClick={birAyAta}>1 Aylık Eczane Ata</button>
-          </form>
+          <button onClick={birAyAta} className="pick_button" style={{padding: "0.4rem 1.5rem"}}>1 aylık eczane ata</button>
         </div>
     )
 }
