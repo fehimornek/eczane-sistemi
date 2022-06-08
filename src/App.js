@@ -3,16 +3,13 @@ import Admin from './components/Administration/Admin';
 import Main from './components/MainPage/Main';
 import LoginAccount from './components/LoginPage/LoginAccount';
 import ErrorPage from './components/misc/ErrorPage';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { EczaneList } from './eczaneData';
 
 function App() {
   const [eczaneler, setEczaneler] = useState(EczaneList)
   const [users, setUsers] = useState({admin : ["admin", "-", "-"], fehim: ["1234", "05454239292", "fehimornek@gmail.com"]})
-  useEffect(() => {
-    console.log("Mounted")
-  }, [])
   
   return (
     <Router>

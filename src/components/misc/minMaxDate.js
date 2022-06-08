@@ -1,10 +1,9 @@
 const minMaxDate = () => {
     const fullDate = new Date()
-    let day = fullDate.getDay() 
     let month = fullDate.getMonth() + 1
     let year = fullDate.getFullYear()
     let date = fullDate.getDate()
-    var lengthOfMonth= new Date(year, month+1, 0).getDate();
+    var lengthOfMonth= new Date(year, month, 0).getDate();
      
     let nextMonthPickableDays = 30 - (lengthOfMonth - date + 1)
     let maxDate = lengthOfMonth

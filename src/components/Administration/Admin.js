@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Otomatik from "./Otomatik"
 import TekTek from "./TekTek"
 import Toplu from "./Toplu"

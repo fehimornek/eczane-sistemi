@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import indexCalculator from "../misc/indexCalculator";
 import "./Main.css"
-const PickDate = ({dates, setNewEczane, showDate, setShowDate}) => {
+
+const PickDate = ({dates, setNewEczane, setShowDate}) => {
     let minDate = dates[0]
     let maxDate = dates[1]
     let lenMonth = dates[2]

@@ -17,10 +17,6 @@ const Main = ({eczaneler}) => {
             <PickDate setNewEczane={setNewEczane} dates={dates} showDate={showDate} setShowDate={setShowDate}></PickDate>
             <h2 className="text_show">Eczaneler</h2>
             <ShowEczane newEczane={newEczane} setNewEczane={setNewEczane} eczaneler={eczaneler} showDate={showDate}></ShowEczane>
-            <div className="extraInformation">
-                <h4 id="telInfo">505 592 9344</h4>
-                <h4 id="addressInfo">Edirne</h4>
-            </div>
         </div>
     )
 }
