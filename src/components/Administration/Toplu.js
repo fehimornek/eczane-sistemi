@@ -41,7 +41,6 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
       setTimeout(function(){
         document.getElementById("errorMessage").style.visibility = "hidden";
         },1000);
-
       setEczaneler(updated_eczaneler)
     }
 

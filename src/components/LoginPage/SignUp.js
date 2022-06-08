@@ -15,7 +15,6 @@ const SignUp = ({users, setUsers}) => {
             document.getElementById("mesaj_hata_2").innerHTML = "Lütfen tüm alanları doldurun!"
             error = 1
         }
-
         else {
             Object.entries(users).forEach(([key, value]) => {
                 if (key === username) {
@@ -27,9 +26,7 @@ const SignUp = ({users, setUsers}) => {
                     error = 1
                 }
             })
-
         }
-
         if (error === 0) {
             let copiedUsers = users
             copiedUsers[username] = [password, telephone, email]

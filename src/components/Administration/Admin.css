@@ -47,6 +47,7 @@
     width: 8rem;
     font-size: 1.2rem;
     padding: 0.30rem 0.5rem;
+    border: 2px solid #2196F3;
 }
 
 .errorMessage{
@@ -62,6 +63,7 @@ hr {
     width: 10rem;
     height: 2.1rem;
     margin-right: 2rem;
+    border: 2px solid #2196F3;
 }
 
 .eczaneSecici{
@@ -69,6 +71,7 @@ hr {
     height: 2rem;
     font-size: 1.2rem;
     margin: 0.15rem 2rem 0rem 2rem;
+    border: 2px solid #2196F3;;
 }
 
 .admBtn {

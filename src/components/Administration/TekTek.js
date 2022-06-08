@@ -1,16 +1,13 @@
 import React from "react";
 import indexCalculator from "../misc/indexCalculator";
 
-
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
-
+  
     const eczaneAtaTek = (e) =>{
         e.preventDefault()
         let seciliSehir = document.getElementById("sehir_sec_tek").value;
         let seciliEczane = document.getElementById("eczane_sec_tek").value;
         let index = indexCalculator("tarih_sec_tek", minDate, lenMonth)
-
-        
 
         if (!Number.isNaN(index) && seciliEczane !== ""){
           const updatedEczane = eczaneler
@@ -29,7 +26,6 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
           },1000);
       }
     
-
     const minDate = dates[0]
     const maxDate = dates[1]
     const lenMonth = dates[2]
