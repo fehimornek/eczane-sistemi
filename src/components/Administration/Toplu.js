@@ -7,19 +7,42 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
     const eczaneAtaToplu = (e) =>{
       e.preventDefault()
       let index = indexCalculator("tarih_sec_toplu", minDate, lenMonth)
+      let Merkez1 = document.getElementById("Merkez1_inp").value
+      let Merkez2 = document.getElementById("Merkez2_inp").value
+      let Meric = document.getElementById("Meric_inp").value
+      let Havsa = document.getElementById("Havsa_inp").value
+      let Enez = document.getElementById("Enez_inp").value
+      let Kesan = document.getElementById("Kesan_inp").value
+      let Lalapasa = document.getElementById("Lalapasa_inp").value
+      let Suloglu = document.getElementById("Suloglu_inp").value
+      let Ipsala = document.getElementById("Ipsala_inp").value
+      let Uzunkopru = document.getElementById("Uzunkopru_inp").value
       let updated_eczaneler = eczaneler
-      updated_eczaneler[index]["Merkez1"] = document.getElementById("Merkez1_inp").value
-      updated_eczaneler[index]["Merkez2"] = document.getElementById("Merkez2_inp").value
-      updated_eczaneler[index]["Meriç"] = document.getElementById("Meric_inp").value
-      updated_eczaneler[index]["Havsa"] = document.getElementById("Havsa_inp").value
-      updated_eczaneler[index]["Enez"] = document.getElementById("Enez_inp").value
-      updated_eczaneler[index]["Keşan"]= document.getElementById("Kesan_inp").value
-      updated_eczaneler[index]["Lalapaşa"] = document.getElementById("Lalapasa_inp").value
-      updated_eczaneler[index]["Süloğlu"] = document.getElementById("Suloglu_inp").value
-      updated_eczaneler[index]["İpsala"] = document.getElementById("Ipsala_inp").value
-      updated_eczaneler[index]["Uzunköprü"] = document.getElementById("Uzunkopru_inp").value
+
+      if (!Number.isNaN(index) && Merkez1 !== "" &&  Merkez2 !== "" &&  Meric !== "" &&  Havsa !== "" &&  Enez !== "" &&  Kesan !== "" &&  Lalapasa !== "" &&  Suloglu !== "" &&  Ipsala !== "" &&  Uzunkopru !== ""){
+        updated_eczaneler[index]["Merkez1"] = Merkez1
+        updated_eczaneler[index]["Merkez2"] = Merkez2
+        updated_eczaneler[index]["Meriç"] = Meric 
+        updated_eczaneler[index]["Havsa"] = Havsa
+        updated_eczaneler[index]["Enez"] = Enez
+        updated_eczaneler[index]["Keşan"] = Kesan
+        updated_eczaneler[index]["Lalapaşa"] = Lalapasa
+        updated_eczaneler[index]["Süloğlu"] = Suloglu
+        updated_eczaneler[index]["İpsala"] = Ipsala
+        updated_eczaneler[index]["Uzunköprü"] = Uzunkopru
+        
+        document.getElementById("errorMessage").style.visibility = "visible";
+        document.getElementById("errorMessage").innerHTML="Degisiklikler kaydedildi!";
+      }
+      else {
+        document.getElementById("errorMessage").style.visibility = "visible";
+        document.getElementById("errorMessage").innerHTML="Gerekli alanları doldurunuz!";
+      }
+      setTimeout(function(){
+        document.getElementById("errorMessage").style.visibility = "hidden";
+        },1000);
+
       setEczaneler(updated_eczaneler)
-      console.log(eczaneler)
     }
 
     const minDate = dates[0]

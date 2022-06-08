@@ -47,6 +47,13 @@ const Otomatik = ({eczaneler, setEczaneler}) => {
         if (indexes.uzunkopru >= secilebilirEczaneler.uzunkopru.length) indexes.uzunkopru = 0
       }
       setEczaneler(updated_eczaneler)
+
+      document.getElementById("errorMessage").style.visibility = "visible";
+      document.getElementById("errorMessage").innerHTML="Degisiklikler kaydedildi!";
+      setTimeout(function(){
+        document.getElementById("errorMessage").style.visibility = "hidden";
+        },1000);
+
     }
 
     return(

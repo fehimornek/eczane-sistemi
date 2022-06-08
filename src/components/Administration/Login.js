@@ -12,6 +12,7 @@ const Login = () => {
                     <h1>Admin Sayfası</h1>
                 </div>
             </div>
+            <div id="errorMessage" className="errorMessage">Gerekli Alanları Doldurunuz!</div>
         </div>
     )
 }

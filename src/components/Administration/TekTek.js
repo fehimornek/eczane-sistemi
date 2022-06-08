@@ -10,20 +10,24 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
         let seciliEczane = document.getElementById("eczane_sec_tek").value;
         let index = indexCalculator("tarih_sec_tek", minDate, lenMonth)
 
-        if (!Number.isNaN(index)){
+        
+
+        if (!Number.isNaN(index) && seciliEczane !== ""){
           const updatedEczane = eczaneler
           updatedEczane[index][seciliSehir] = seciliEczane
           setEczaneler(updatedEczane)
-          document.getElementById("mesaj_basari_hata").innerHTML="Degisiklikler kaydedildi!";
+          document.getElementById("errorMessage").style.visibility = "visible";
+          document.getElementById("errorMessage").innerHTML="Degisiklikler kaydedildi!";
         }
+
         else{
-          document.getElementById("mesaj_basari_hata").innerHTML="Tarih secin!";
+          document.getElementById("errorMessage").style.visibility = "visible";
+          document.getElementById("errorMessage").innerHTML="Gerekli alanları doldurunuz!";
         }
         setTimeout(function(){
-          document.getElementById("mesaj_basari_hata").innerHTML="";
+          document.getElementById("errorMessage").style.visibility = "hidden";
           },1000);
-          console.log(eczaneler)
-    }
+      }
     
 
     const minDate = dates[0]
@@ -48,9 +52,8 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
             </select>
             <input id="tarih_sec_tek" type="date" className="tarih_admin" min={minDate} max={maxDate}></input>
             <input type="text" id="eczane_sec_tek" className="input_text"/>
-            <button onClick={eczaneAtaTek} className="pick_button tektekBtn">atama yap</button>
+            <button onClick={eczaneAtaTek} className="pick_button tektekBtn">eczane ata</button>
           </form>
-          <h4 id="mesaj_basari_hata"></h4>
           <hr></hr>
         </div>
     )

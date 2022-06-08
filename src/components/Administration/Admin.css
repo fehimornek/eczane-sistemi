@@ -10,7 +10,7 @@
 }
 
 .log {
-    grid-column: 1 / 2;
+    grid-column: 1 / 5;
 }
 
 .splitScreen {
@@ -30,6 +30,7 @@
 
 .atama_tek{
     grid-column: 1 / 5;
+
 }
 
 .atama_toplu {
@@ -48,8 +49,9 @@
     padding: 0.30rem 0.5rem;
 }
 
-.mesaj_basari_hata{
-    text-align: right;
+.errorMessage{
+    grid-column: 4 / 5;
+    
 }
 
 hr {
