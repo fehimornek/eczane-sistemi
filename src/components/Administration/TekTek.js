@@ -1,6 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import indexCalculator from "../misc/indexCalculator";
+
+
 const TekTek = ({eczaneler, setEczaneler, dates}) => {
+
     const eczaneAtaTek = (e) =>{
         e.preventDefault()
         let seciliSehir = document.getElementById("sehir_sec_tek").value;
@@ -19,6 +22,7 @@ const TekTek = ({eczaneler, setEczaneler, dates}) => {
         setTimeout(function(){
           document.getElementById("mesaj_basari_hata").innerHTML="";
           },1000);
+          console.log(eczaneler)
     }
     
 

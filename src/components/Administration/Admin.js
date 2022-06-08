@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect} from 'react'
 import Otomatik from "./Otomatik"
 import TekTek from "./TekTek"
 import Toplu from "./Toplu"
@@ -8,7 +8,7 @@ import minMaxDate from '../misc/minMaxDate'
 
 const Admin = ({eczaneler, setEczaneler}) => {
     let dates = minMaxDate()
-    
+
     return (
         <div className='grid_container_admin'>
             <Login></Login>

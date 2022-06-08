@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Main.css"
 
 const ShowEczane = ({newEczane, setNewEczane, eczaneler, showDate}) => {
@@ -19,6 +19,9 @@ const ShowEczane = ({newEczane, setNewEczane, eczaneler, showDate}) => {
         eczaneGoster()
         setNewEczane(0)
     }
+    useEffect(()=>{
+        eczaneGoster()
+    }, [])
 
     return (
         <div className="grid_container_showEczane">
@@ -68,7 +71,6 @@ const ShowEczane = ({newEczane, setNewEczane, eczaneler, showDate}) => {
                     <td id="uzunkopru_main"></td>
                 </tr>
             </table>
-                
         </div>
     )
 }

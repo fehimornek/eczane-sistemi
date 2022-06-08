@@ -80,10 +80,17 @@
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
+.extraInformation{
+    background-color: #008CBA;
+    border-radius: 2rem;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin-bottom: 35rem;
+    font-size: 2rem;
+}
 
   .loginTitle{
-    font-size: 5rem;
+    font-size: 4rem;
       color: #008CBA;
     grid-column: 1 / 4;
   }

@@ -19,11 +19,8 @@ const Toplu = ({eczaneler, setEczaneler, dates}) => {
       updated_eczaneler[index]["İpsala"] = document.getElementById("Ipsala_inp").value
       updated_eczaneler[index]["Uzunköprü"] = document.getElementById("Uzunkopru_inp").value
       setEczaneler(updated_eczaneler)
-    }
-    useEffect(() => {
-      window.localStorage.setItem("eczeneler", JSON.stringify(eczaneler))
       console.log(eczaneler)
-    }, [eczaneler])
+    }
 
     const minDate = dates[0]
     const maxDate = dates[1]

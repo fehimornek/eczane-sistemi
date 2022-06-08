@@ -6,8 +6,6 @@ const PickDate = ({dates, setNewEczane, showDate, setShowDate}) => {
     let maxDate = dates[1]
     let lenMonth = dates[2]
 
-    let calendarBool = 0
-
     const eczaneGosterBugun = () => {
         setShowDate(0)
         setNewEczane(1)
@@ -25,7 +23,7 @@ const PickDate = ({dates, setNewEczane, showDate, setShowDate}) => {
     return (
         <div className="grid_container_pickDate">  
                 <button onClick={eczaneGosterBugun} className="pick_button">Bugünkü eczane</button>
-                <button onClick={eczaneGosterYarin} className="pick_button">Yarınkı eczane</button>
+                <button onClick={eczaneGosterYarin} className="pick_button">Yarınki eczane</button>
                 <input onChange={eczaneGosterTarih} defaultValue={minDate} id="tarih_main" type="date" min={minDate} max={maxDate} className="calendar_main"></input>            
         </div>
     )

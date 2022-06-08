@@ -1,6 +1,8 @@
 import React from 'react'
+import {useNavigate} from "react-router-dom"
 
 const SignIn = ({users}) => {
+    const navigator = useNavigate()
 
     const checkValid = (e) => {
         e.preventDefault()
@@ -9,7 +11,7 @@ const SignIn = ({users}) => {
         let match = 0
        Object.entries(users).forEach(([key, value]) => {
            if (key === username && value[0] === password) {
-               window.location = "./admin"
+                navigator("/admin")
                match = 1
            }
        })
@@ -24,13 +26,12 @@ const SignIn = ({users}) => {
     return (
         <div className="giris_yap">
             <form >
-            <label>Kullanıcı Adı</label><br/>
-            <input type="text" id="username" /><br/>
-            <label>Şifre</label><br/>
-            <input type="password" id="password" /><br/>
-            <button onClick={checkValid} className='pick_button kayit_btn' style={{fontSize: "1.5rem"}}>giriş yap</button><br/>
-            <h4 id="mesaj_hata_1"></h4>
-
+                <label>Kullanıcı Adı</label><br/>
+                <input type="text" id="username" /><br/>
+                <label>Şifre</label><br/>
+                <input type="password" id="password" /><br/>
+                <button onClick={checkValid} className='pick_button kayit_btn' style={{fontSize: "1.5rem"}}>giriş yap</button><br/>
+                <h4 id="mesaj_hata_1"></h4>
             </form>
         </div>
     )
